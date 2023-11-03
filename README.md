@@ -1,2 +1,1 @@
-# React + Vite
-DATA
+# Shopping Cart Application
