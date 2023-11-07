@@ -1,6 +1,13 @@
+body {
+  margin: 0;
+}
+
 .content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200vh;
+  background-color: rgb(140, 201, 203);
+  width: 100%;
+  max-width: 100%;
 }

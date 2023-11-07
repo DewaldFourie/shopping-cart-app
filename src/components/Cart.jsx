@@ -6,18 +6,26 @@ const Cart = ({ isOpen, closeCart }) => {
         <div className={`cart ${isOpen ? 'open' : ''}`}>
             <div className='cart-left'>
                 <div className='cart-header left'>
-                    <h2>Your Cart</h2>
-                    <span>#items</span>
+                    <h2>Shopping Cart</h2>
+                    <span className='number-of-items'>#items</span>
                 </div>
                 <hr />
                 <div className='cart-content'>
                     {/* will be a dynamically generated items */}
                     <div className='cart-item'>
-                    ITEM 1
-                    <hr />
+                        <span>ITEM 1</span>
                     </div>
+                    <hr />
+                    <div className='cart-item'>
+                        <span>ITEM 2</span>
+                    </div>
+                    <hr />
+                    <div className='cart-item'>
+                        <span>ITEM 3</span>
+                    </div>
+                    <hr />
                 </div>
-                <div>
+                <div className='closeCart-btn-container'>
                     <button onClick={closeCart}>Back to Shop</button>
                 </div>
             </div>
@@ -39,7 +47,7 @@ const Cart = ({ isOpen, closeCart }) => {
                     </select>
                 </div>
                 <div className='voucher-code-container'>
-                    GIVE CODE
+                    <h4>GIVE CODE</h4>
                     <input type="text" placeholder='Enter your code'/>
                 </div>
                 <hr />
@@ -47,7 +55,7 @@ const Cart = ({ isOpen, closeCart }) => {
                     <h4>TOTAL PRICE</h4>
                     <h4>$125.00</h4>
                 </div>
-                <div className='checout-btn-container'>
+                <div className='checkout-btn-container'>
                     <button>CHECKOUT</button>
                 </div>
             </div>
