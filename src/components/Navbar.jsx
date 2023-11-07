@@ -1,13 +1,20 @@
 import { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import Cart from './Cart';
 import './styles/navbar.css';
 
 function Navbar() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isNavbarSticky, setIsNavbarSticky] = useState(false);
+    const [isCartOpen, setCartOpen] = useState(false);
+
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const toggleCart = () => {
+        setCartOpen(!isCartOpen);
     };
 
     useEffect(() => {
@@ -43,16 +50,15 @@ function Navbar() {
                         Contact
                     </NavLink>
                 </div>
-                <div className="your-cart">
-                    <NavLink to="/" onClick={toggleMobileMenu}>
-                        Cart
-                    </NavLink>
-                </div>
                 <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
+                <div className="your-cart">
+                    <button onClick={toggleCart}>Cart</button>
+                </div>
+                <Cart isOpen={isCartOpen} closeCart={toggleCart}/>
             </div>
         </nav>
     );
