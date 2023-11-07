@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { useEffect } from "react";
+import './styles/home.css'
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="content">
+            <div className="home-content">
                 <span>This is the Home Page</span>
             </div>
             <Footer />

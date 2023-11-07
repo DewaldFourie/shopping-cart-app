@@ -1,0 +1,9 @@
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    background-color: rgb(175, 140, 203);
+    width: 100%;
+    max-width: 100%;
+}

@@ -1,0 +1,9 @@
+.shop-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    background-color: rgb(140, 202, 132);
+    width: 100%;
+    max-width: 100%;
+}
