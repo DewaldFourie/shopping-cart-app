@@ -1,5 +1,4 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 import { useEffect } from "react";
 import './styles/shop.css'
 
@@ -12,11 +11,9 @@ const Shop = () => {
 
     return (
         <>
-            <Navbar />
             <div className="shop-content">
                 <span>This is the Shop page</span>
             </div>
-            <Footer /> 
         </>
     )
 } 

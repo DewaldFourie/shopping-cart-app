@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/cart.css'
 import PropTypes from 'prop-types'
 import CartItem from './CartItem'
 
-const Cart = ({ isOpen, closeCart }) => {
+const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
 
     const [demoItems, setDemoItems] = useState([
         {
@@ -55,6 +55,10 @@ const Cart = ({ isOpen, closeCart }) => {
         setTotalItems(calculateTotalQuantity(updatedItems));
         setTotalPrice(calculateTotalPrice(updatedItems))
     }
+
+    useEffect(() => {
+        onTotalItemsChange(totalItems);
+    }, [totalItems, onTotalItemsChange])
 
     return (
         <div className={`cart ${isOpen ? 'open' : ''}`}>
@@ -121,7 +125,6 @@ const Cart = ({ isOpen, closeCart }) => {
                     <button>CHECKOUT</button>
                 </div>
             </div>
-
         </div>
     )
 } 

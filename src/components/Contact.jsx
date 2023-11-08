@@ -1,5 +1,4 @@
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+
 import { useEffect } from "react";
 import './styles/contact.css'
 
@@ -12,11 +11,9 @@ const Contact = () => {
 
     return (
         <>
-            <Navbar />
             <div className="contact-content">
                 <span>This is the Contact Page</span>
             </div>
-            <Footer />
         </>
     )
 } 
