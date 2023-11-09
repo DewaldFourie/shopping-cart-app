@@ -1,6 +1,8 @@
+// The home page route
 
 import { useEffect } from "react";
 import './styles/home.css'
+
 
 const Home = () => {
 

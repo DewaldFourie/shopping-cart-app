@@ -1,6 +1,9 @@
+// The shop page route
 
 import { useEffect } from "react";
 import './styles/shop.css'
+
+
 
 const Shop = () => {
 

@@ -1,14 +1,18 @@
+// Cart Component (Parent to cartItem component)
+
 import { useEffect, useState } from 'react'
 import './styles/cart.css'
 import PropTypes from 'prop-types'
 import CartItem from './CartItem'
+import testItemImage from '../assets/shirt.jpg'
 
 const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
 
+    // demo items for testing and designing purposes
     const [demoItems, setDemoItems] = useState([
         {
             id: 1,
-            imageSrc: 'item1.jpg',
+            imageSrc: testItemImage,
             name: 'Item 1',
             size: 'M',
             quantity: 1,
@@ -16,7 +20,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
         },
         {
             id: 2,
-            imageSrc: 'item2.jpg',
+            imageSrc: testItemImage,
             name: 'Item 2',
             size: 'L',
             quantity: 1,
@@ -24,7 +28,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
         },
         {
             id: 3,
-            imageSrc: 'item3.jpg',
+            imageSrc: testItemImage,
             name: 'Item 3',
             size: 'S',
             quantity: 1,
@@ -32,23 +36,28 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
         },
     ]);
 
+    // function to sum all the quantities in the items List to get total Quantity
     const calculateTotalQuantity = (items) => {
         return items.reduce((total, item) => total + item.quantity, 0);
     }
 
+    // function to sum all the prices of the items List times their quantity to get total Price
     const calculateTotalPrice = (items) => {
         return items.reduce((total, item) => total + item.quantity * item.price, 0)
     } 
 
+    // state initiation
     const [totalItems, setTotalItems] = useState(calculateTotalQuantity(demoItems));
     const [totalPrice, setTotalPrice] = useState(calculateTotalPrice(demoItems));
 
+    // update function to set the new items List if added or removed
     const updateTotalItems = (updatedItems) => {
         setDemoItems(updatedItems)
         setTotalItems(calculateTotalQuantity(updatedItems))
         setTotalPrice(calculateTotalPrice(updatedItems))
     }
 
+    // function called in the cartItem component if an item is removed from cart    
     const removeItem = (itemToRemove) => {
         const updatedItems = demoItems.filter((item) => item.id !== itemToRemove.id);
         setDemoItems(updatedItems);
@@ -56,9 +65,11 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
         setTotalPrice(calculateTotalPrice(updatedItems))
     }
 
+    // function called in the cartItem component to keep track of items changes
     useEffect(() => {
         onTotalItemsChange(totalItems);
     }, [totalItems, onTotalItemsChange])
+
 
     return (
         <div className={`cart ${isOpen ? 'open' : ''}`}>
@@ -87,9 +98,6 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
                             </div>
                         ))
                     )}
-                    
-
-                    
                 </div>
                 <div className='closeCart-btn-container'>
                     <button onClick={closeCart}>Back to Shop</button>
@@ -106,7 +114,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
                 </div>
                 <div className='shipping-container'>
                     <h4>SHIPPING</h4>
-                    <select name="shipping" id="shipping">
+                    <select className='shipping-box' name="shipping" id="shipping">
                         <option value="standard-delivery">Standard Delivery</option>
                         <option value="express-delivery">Express Delivery</option>
                         <option value="priority-delivery">priority Delivery</option>
@@ -114,7 +122,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
                 </div>
                 <div className='voucher-code-container'>
                     <h4>GIVE CODE</h4>
-                    <input type="text" placeholder='Enter your code'/>
+                    <input className='voucher-box' type="text" placeholder='Enter your code'/>
                 </div>
                 <hr />
                 <div className='total-price-container'>
@@ -132,6 +140,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
 Cart.propTypes = {
     isOpen: PropTypes.bool.isRequired,
     closeCart: PropTypes.func.isRequired,
+    onTotalItemsChange: PropTypes.func.isRequired,
 };
 
 export default Cart;

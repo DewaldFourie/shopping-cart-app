@@ -1,3 +1,4 @@
+// The contact page route
 
 import { useEffect } from "react";
 import './styles/contact.css'

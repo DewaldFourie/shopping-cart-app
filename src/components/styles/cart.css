@@ -14,6 +14,7 @@
 
 .cart.open {
     width: 50%;
+    max-width: 720px;
 }
 
 hr {
@@ -86,10 +87,18 @@ hr {
     margin-bottom: 1rem;
 }
 
+.shipping-box {
+    height: 1.7rem;
+}
+
 .voucher-code-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 4rem;
+}
+
+.voucher-box {
+    height: 1.7rem;
 }
 
 .total-price-container {
@@ -105,6 +114,7 @@ hr {
     margin-top: 2rem;
 }
 
+
 /* Cart Item Styles*/
 
 .cart-item {
@@ -114,7 +124,8 @@ hr {
 }
 
 .cart-item-image {
-    height: 25px;
+    height: 4rem;
+    width: 6rem;
 }
 
 .item-details-container {
@@ -146,7 +157,28 @@ hr {
     padding: 5px;
 }
 
+.quantity-adjust-btn {
+    background: transparent;
+    border: none;
+    color: blue;
+    font-size: larger;
+    padding: 0 5px;
+}
 
+.quantity-adjust-btn:hover {
+    cursor: pointer;
+}
+
+.item-remove-button {
+    background: transparent;
+    border: none;
+    font-size: larger;
+    color: grey;
+}
+
+.item-remove-button:hover {
+    cursor: pointer;
+}
 
 
 
@@ -162,6 +194,11 @@ hr {
         top: 1%;
         right: 2%;
     }
+
+    .cart-item {
+        gap: 10px;
+    }
+
 
     .cart.open {
         width: 70%;
@@ -189,9 +226,20 @@ hr {
 
 }
 
+@media (max-width: 550px) {
+    .cart-item {
+        gap: 3px;
+    }
+
+}
+
 @media (max-width: 400px) {
     .cart {
         top: 2%;
+    }
+
+    .cart-item {
+        gap: 2px;
     }
 
     .number-of-items {

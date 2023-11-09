@@ -50,7 +50,7 @@ const CartItem = ({ item , updateTotalItems, demoItems, removeItem}) => {
     return (
         <div className='cart-item'>
             <div className='item-image-container'>
-                <img className="cart-item-image" src="" alt={item.imageSrc} />
+                <img className="cart-item-image" src={item.imageSrc} alt={item.imageSrc} />
             </div>
             <div className='item-details-container'>
                 <span className='item-name'>{item.name}</span>
@@ -64,14 +64,14 @@ const CartItem = ({ item , updateTotalItems, demoItems, removeItem}) => {
                     <span>Qty:</span>
                 </div> */}
                 <div className='item-quantity-display'>
-                    <button onClick={decrementQuantity}>-</button>
+                    <button className='quantity-adjust-btn' onClick={decrementQuantity}>-</button>
                     <input 
                         className="quantity-input" 
                         type="number" value={quantity} 
                         onChange={handleInputChange} 
                         readOnly    
                     />
-                    <button onClick={incrementQuantity}>+</button>
+                    <button className='quantity-adjust-btn' onClick={incrementQuantity}>+</button>
                 </div>
             </div>
             <div className='item-price-container'>

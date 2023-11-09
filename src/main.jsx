@@ -5,10 +5,6 @@ import './App.css'
 import Router from './Router'
 
 
-
-// main needs to be edited to control the client side routing  
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router />
