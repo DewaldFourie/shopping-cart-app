@@ -67,7 +67,7 @@ const CartItem = ({ item , updateTotalItems, demoItems, removeItem}) => {
                     <button className='quantity-adjust-btn' onClick={decrementQuantity}>-</button>
                     <input 
                         className="quantity-input" 
-                        type="number" value={quantity} 
+                        type="text" value={quantity} 
                         onChange={handleInputChange} 
                         readOnly    
                     />
@@ -78,7 +78,7 @@ const CartItem = ({ item , updateTotalItems, demoItems, removeItem}) => {
                 <span>$ {(item.price * item.quantity).toFixed(2)}</span>
             </div>
             <div className='item-remove-container'>
-                <button className='item-remove-button' onClick={removeCartItem}>x</button>
+                <button className='item-remove-button' onClick={removeCartItem}>✕</button>
             </div>
         </div>
     )

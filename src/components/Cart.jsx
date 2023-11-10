@@ -100,7 +100,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
                     )}
                 </div>
                 <div className='closeCart-btn-container'>
-                    <button onClick={closeCart}>Back to Shop</button>
+                    <button className='closeCart-btn' onClick={closeCart}>🔙 TO SHOP</button>
                 </div>
             </div>
             <div className='cart-right'>
@@ -126,7 +126,7 @@ const Cart = ({ isOpen, closeCart, onTotalItemsChange }) => {
                 </div>
                 <hr />
                 <div className='total-price-container'>
-                    <h4>TOTAL PRICE</h4>
+                    <h4>TOTAL PRICE:</h4>
                     <h4>$ {totalPrice.toFixed(2)}</h4>
                 </div>
                 <div className='checkout-btn-container'>
