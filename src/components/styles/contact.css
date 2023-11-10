@@ -6,6 +6,7 @@
     background-color: rgb(175, 140, 203);
     width: 100%;
     max-width: 100%;
+    
 }
 
 .contact-container {
@@ -15,6 +16,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin: 0 4rem;
 }
 
 .contact-body {
@@ -31,6 +33,7 @@
     align-items: center;
     outline: 1px solid;
     padding: 2rem;
+    border-radius: 25px;
 }
 
 .contact-icon {
@@ -53,7 +56,7 @@
 
 }
 
-@media (max-width: 875px) {
+@media (max-width: 1000px) {
 
     .contact-content {
         height: auto;
@@ -87,6 +90,8 @@
     .contact-container {
         margin-top: 8rem;
         margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .contact-body {
@@ -105,4 +110,10 @@
         width: 100%;
     }
 
+}
+
+@media (min-height: 785px) {
+    .contact-content {
+        height: 94.8vh;
+    }
 }
