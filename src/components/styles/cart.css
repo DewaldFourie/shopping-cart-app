@@ -64,7 +64,7 @@ hr {
 .closeCart-btn-container {
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
 }
 
 .closeCart-btn {
@@ -75,6 +75,16 @@ hr {
 .closeCart-btn:hover {
     cursor: pointer;
     border-bottom: solid black 1px;
+}
+
+.empty-cart-btn.invisible{
+    display: none;
+}
+
+.empty-cart-btn:hover {
+    cursor: pointer;
+    color: red;
+    border-color: red;
 }
 
 /* Right Side of Cart Component*/
@@ -236,9 +246,10 @@ hr {
     .closeCart-btn-container {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         margin-top: 20px;
     }
+
 
 }
 

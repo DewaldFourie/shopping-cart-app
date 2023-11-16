@@ -1,17 +1,20 @@
 // The Navbar components (Parent to the Cart component)
 
-import { useState, useEffect } from 'react';
+import { useContext ,useState , useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Cart from './Cart';
 import './styles/navbar.css';
+import { CartContext } from '../context/cartContext';
 import cartIcon from '../assets/cart-icon.png'
 
 function Navbar() {
+    // getCartIte,Total function from context
+    const {getCartItemTotal} = useContext(CartContext)
     // state initiation
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isNavbarSticky, setIsNavbarSticky] = useState(false);
     const [isCartOpen, setCartOpen] = useState(false);
-    const [cartTotalItems, setCartTotalItems] = useState(0);
+
 
     // function to toggle the mobile burger menu @ certain media query
     const toggleMobileMenu = () => {
@@ -63,9 +66,9 @@ function Navbar() {
                 </div>
                 <div className="your-cart">
                     <div><img className='cart-icon' src={cartIcon} alt="Cart"  onClick={toggleCart}/></div>
-                    <div className='badge'>{cartTotalItems}</div>
+                    <div className='badge'>{getCartItemTotal()}</div>
                 </div>
-                <Cart isOpen={isCartOpen} closeCart={toggleCart} onTotalItemsChange={setCartTotalItems}/>
+                <Cart isOpen={isCartOpen} closeCart={toggleCart}/>
             </div>
         </nav>
     );

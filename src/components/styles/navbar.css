@@ -16,7 +16,7 @@
 }
 
 .navbar.sticky {
-    background-color: #33333370; /* Change to the desired background color when sticky */
+    background-color: rgb(90, 117, 255); /* Change to the desired background color when sticky */
     position: fixed;
 }
 

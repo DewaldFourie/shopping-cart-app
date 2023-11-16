@@ -1,6 +1,9 @@
-import './styles/shop.css'
+import PropTypes from 'prop-types';
+import './styles/shop.css';
 
-const ShopItem = ( {item} ) => {
+const ShopItem = ({ item, addToCart }) => {
+
+
     return (
         <div className='shop-item-container'>
             <div className='shop-item-image-container'>
@@ -17,10 +20,24 @@ const ShopItem = ( {item} ) => {
                 </div>
                 <div className='shop-item-price-container'>
                     <h4 className='shop-item-price'>$ {item.price}</h4>
+                    <button className='add-to-cart-button' onClick={() => addToCart(item)}>Add to Cart</button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
+ShopItem.propTypes = {
+    item: PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        image: PropTypes.string.isRequired,
+        rating: PropTypes.shape({
+            rate: PropTypes.number.isRequired,
+        }),
+        price: PropTypes.number.isRequired,
+    }).isRequired,
+    addToCart: PropTypes.func.isRequired,
+};
+
 
 export default ShopItem;
