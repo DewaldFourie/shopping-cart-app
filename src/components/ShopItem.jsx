@@ -12,10 +12,11 @@ const ShopItem = ({ item, addToCart }) => {
             <div className='shop-item-details-container'>
                 <div className='shop-item-text-container'>
                     <div className='shop-item-name-container'>
-                        <h5 className='shop-item-name'>{item.title}</h5>
+                        <h5 className='shop-item-name'>{item.title.slice(0, 40)}</h5>
                     </div>
                     <div className='shop-item-info-container'>
                         <span className='shop-item-info'>Rating: {item.rating.rate}</span>
+                        
                     </div>
                 </div>
                 <div className='shop-item-price-container'>

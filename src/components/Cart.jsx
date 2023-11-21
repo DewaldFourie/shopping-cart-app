@@ -41,7 +41,7 @@ const Cart = ({ isOpen, closeCart }) => {
                     )}
                 </div>
                 <div className='closeCart-btn-container'>
-                    <button className='closeCart-btn' onClick={closeCart}>🔙 TO SHOP</button>
+                    <button className='closeCart-btn' onClick={closeCart}>🔙 CLOSE CART</button>
                     <button className={`closeCart-btn empty-cart-btn ${cartItems.length === 0 ? 'invisible' : 'visible'}`} onClick={clearCart}>EMPTY CART</button>
                 </div>
             </div>
@@ -59,7 +59,7 @@ const Cart = ({ isOpen, closeCart }) => {
                     <select className='shipping-box' name="shipping" id="shipping">
                         <option value="standard-delivery">Standard Delivery</option>
                         <option value="express-delivery">Express Delivery</option>
-                        <option value="priority-delivery">priority Delivery</option>
+                        <option value="priority-delivery">Priority Delivery</option>
                     </select>
                 </div>
                 <div className='voucher-code-container'>

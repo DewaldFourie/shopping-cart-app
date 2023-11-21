@@ -10,7 +10,7 @@ const CartItem = ({ item, addToCart, decrementItemInCart, deleteItemFromCart }) 
                 <img className="cart-item-image" src={item.image} alt={item.image} />
             </div>
             <div className='item-details-container'>
-                <span className='item-name'>{item.title}</span>
+                <span className='item-name'>{item.title.slice(0, 20)}</span>
                 <div className='item-info'>
                     <span>Size: </span>
                     <span>{item.rating.rate}</span>
@@ -31,7 +31,7 @@ const CartItem = ({ item, addToCart, decrementItemInCart, deleteItemFromCart }) 
                 </div>
             </div>
             <div className='item-price-container'>
-                <span>$ {(item.price).toFixed(2)}</span>
+                <span className='cart-item-price'>$ {(item.price).toFixed(2)}</span>
             </div>
             <div className='item-remove-container'>
                 <button className='item-remove-button' onClick={() => deleteItemFromCart(item)}>✕</button>

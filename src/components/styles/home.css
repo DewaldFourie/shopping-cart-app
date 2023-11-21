@@ -1,9 +1,23 @@
 .home-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 200vh;
     background-color: rgb(140, 201, 203);
     width: 100%;
     max-width: 100%;
+}
+
+.banner-container {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+.banner-container-text {
+    width: 15rem;
+    text-align: center;
 }

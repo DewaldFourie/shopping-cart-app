@@ -11,6 +11,8 @@ const useDataUrl = () => {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const [shopCategory, setShopCategory] = useState('products')
+    const [activeCategory, setActiveCategory] = useState('products')
+
 
     useEffect(() => {
         setLoading(true)
@@ -28,18 +30,25 @@ const useDataUrl = () => {
 
     const handleCategorySelect = (category) => {
         setShopCategory(category)
+        setActiveCategory(category)
     }
 
-    return { data, error, loading, handleCategorySelect };
+    return { data, error, loading, handleCategorySelect, activeCategory };
 };
 
 
 const Shop = () => {
-    const { data, error, loading, handleCategorySelect } = useDataUrl();
+    const { data, error, loading, handleCategorySelect, activeCategory } = useDataUrl();
     const { addToCart } = useContext(CartContext)
 
-    const mensClothing = "men's clothing"
-    const womensClothing = "women's clothing"
+    const shopCategories = [
+        { name: 'All Products', url: 'products' },
+        { name: 'Electronics', url: 'products/category/electronics' },
+        { name: "Men's Clothing", url: "products/category/men's clothing" },
+        { name: "Women's Clothing", url: "products/category/women's clothing" },
+        { name: 'Jewelery', url: 'products/category/jewelery' },
+        
+    ]
 
     useEffect(() => {
         // Scroll to the top when the component mounts
@@ -55,11 +64,15 @@ const Shop = () => {
             <div className="shop-content">
                 <div className="shop-container">
                     <div className="shop-header">
-                        <h3 className="shop-category" onClick={() => handleCategorySelect('products')}>All Products</h3>
-                        <h3 className="shop-category" onClick={() => handleCategorySelect('products/category/electronics')}>electronics</h3>
-                        <h3 className="shop-category" onClick={() => handleCategorySelect('products/category/jewelery')}>jewelery</h3>
-                        <h3 className="shop-category" onClick={() => handleCategorySelect(`products/category/${mensClothing}`)}>Men's Clothing</h3>
-                        <h3 className="shop-category" onClick={() => handleCategorySelect(`products/category/${womensClothing}`)}>Women's Clothing</h3>
+                        {shopCategories.map((category, index) => (
+                            <h3
+                                key={index}
+                                className={`shop-category ${activeCategory === category.url ? 'active' : ''}`}
+                                onClick={() => handleCategorySelect(category.url)}
+                            >
+                                {category.name}
+                            </h3>
+                        ))}
                     </div>
                     <div className={loading ? 'shop-body-loading' :'shop-body'}>
                         {loading ?

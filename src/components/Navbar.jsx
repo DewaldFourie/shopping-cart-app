@@ -6,9 +6,10 @@ import Cart from './Cart';
 import './styles/navbar.css';
 import { CartContext } from '../context/cartContext';
 import cartIcon from '../assets/cart-icon.png'
+import cartIconWhite from '../assets/cart-icon-white.png'
 
 function Navbar() {
-    // getCartIte,Total function from context
+    // getCartItemTotal function from context
     const {getCartItemTotal} = useContext(CartContext)
     // state initiation
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -45,10 +46,10 @@ function Navbar() {
     return (
         <nav className={`navbar ${isNavbarSticky ? 'sticky' : ''} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
             <div className="container">
-                <div className="brand-name">
+                <div className={`brand-name ${isNavbarSticky ? 'sticky' : ''}`}>
                     <NavLink to="/home">Brand Name</NavLink>
                 </div>
-                <div className={`nav-links ${isMobileMenuOpen ? 'mobile' : ''}`}>
+                <div className={`nav-links ${isMobileMenuOpen ? 'mobile' : '' } ${isNavbarSticky ? 'sticky' : ''}`}>
                     <NavLink to="/home" exact activeClassName="active" onClick={toggleMobileMenu}>
                         Home
                     </NavLink>
@@ -59,13 +60,13 @@ function Navbar() {
                         Contact
                     </NavLink>
                 </div>
-                <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''}`} onClick={toggleMobileMenu}>
+                <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''} ${isNavbarSticky ? 'sticky' : ''}`} onClick={toggleMobileMenu}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
                 <div className="your-cart">
-                    <div><img className='cart-icon' src={cartIcon} alt="Cart"  onClick={toggleCart}/></div>
+                    <div><img className='cart-icon' src={isNavbarSticky ? cartIconWhite : cartIcon} alt="Cart"  onClick={toggleCart}/></div>
                     <div className='badge'>{getCartItemTotal()}</div>
                 </div>
                 <Cart isOpen={isCartOpen} closeCart={toggleCart}/>

@@ -14,7 +14,14 @@ const Home = () => {
     return (
         <>
             <div className="home-content">
-                <span>This is the Home Page</span>
+                <div className="banner-container">
+                    <p className="banner-container-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                        optio, eaque rerum! Provident similique accusantium nemo autem.
+                    </p>
+                </div>
             </div>
         </>
     )

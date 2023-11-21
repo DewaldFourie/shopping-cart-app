@@ -16,8 +16,9 @@
 }
 
 .navbar.sticky {
-    background-color: rgb(90, 117, 255); /* Change to the desired background color when sticky */
+    background-color: rgb(0, 0, 0); 
     position: fixed;
+    color: white;
 }
 
 .container {
@@ -36,8 +37,12 @@
 .brand-name a{
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+}
+
+.brand-name.sticky a {
+    color: white;
 }
 
 .nav-links {
@@ -46,9 +51,13 @@
 }
 
 .nav-links a {
-    color: black;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     margin: 0 20px;
+}
+
+.nav-links.sticky a{
+    color: white;
 }
 
 .nav-links a.active {
@@ -64,7 +73,6 @@
 
 .your-cart a {
     font-size: 20px;
-    color: black;
     text-decoration: none;
 }
 
@@ -76,7 +84,7 @@
 .badge {
     width: fit-content;
     padding: 0 3px;
-    background-color: purple;
+    background-color: rgb(244, 72, 72);
     color: white;
     height: 50%;
     border-radius: 5px;
@@ -108,7 +116,7 @@
         top: 4.25rem;
         left: 0;
         right: 0;
-        background-color: #33333370;
+        background-color: #2b2b2bcb;
         text-align: center;
     }
 
@@ -132,6 +140,10 @@
 
     .mobile-menu-icon {
         display: flex;
+    }
+
+    .mobile-menu-icon.sticky .bar{
+        background-color: white;
     }
 
     .mobile-menu-icon.open .bar:first-child {
