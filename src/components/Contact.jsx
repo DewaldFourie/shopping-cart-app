@@ -31,7 +31,7 @@ const Contact = () => {
                                     <p>Office hours: 8am - 5pm</p>
                                 </div>
                                 <div className="contact-btn-container">
-                                    <button>click me</button>
+                                    <button className="contact-btn">CALL</button>
                                 </div>
                             </div>
                             <div className="contact-section">
@@ -44,7 +44,7 @@ const Contact = () => {
                                     <p>We'll get back to you ASAP!</p>
                                 </div>
                                 <div className="contact-btn-container">
-                                    <button>click me</button>
+                                    <button className="contact-btn">INQUIRE</button>
                                 </div>                  
                             </div>
                             <div className="contact-section">
@@ -57,12 +57,14 @@ const Contact = () => {
                                     <p>Operating hours: 7am - 10pm</p>
                                 </div>
                                 <div className="contact-btn-container">
-                                    <button>click me</button>
+                                    <button className="contact-btn">CHAT</button>
                                 </div>
                             </div>
                         </div>
                         <div className="contact-footer">
-                            t&c`s
+                            <p>support@virtuevogue.org</p>
+                            <p>+534 251 8547</p>
+                            <p>123 Main St, Suite 4A. Cityville, State 54321. USA</p>
                         </div>
                     </div>
             </div>

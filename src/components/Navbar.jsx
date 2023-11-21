@@ -51,13 +51,13 @@ function Navbar() {
                 </div>
                 <div className={`nav-links ${isMobileMenuOpen ? 'mobile' : '' } ${isNavbarSticky ? 'sticky' : ''}`}>
                     <NavLink to="/home" exact activeClassName="active" onClick={toggleMobileMenu}>
-                        Home
+                        HOME
                     </NavLink>
                     <NavLink to="/shop" activeClassName="active" onClick={toggleMobileMenu}>
-                        Shop
+                        SHOP
                     </NavLink>
                     <NavLink to="/contact" activeClassName="active" onClick={toggleMobileMenu}>
-                        Contact
+                        CONTACT
                     </NavLink>
                 </div>
                 <div className={`mobile-menu-icon ${isMobileMenuOpen ? 'open' : ''} ${isNavbarSticky ? 'sticky' : ''}`} onClick={toggleMobileMenu}>

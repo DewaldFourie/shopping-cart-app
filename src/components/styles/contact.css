@@ -62,8 +62,22 @@
 
 }
 
-.contact-footer {
+.contact-btn {
+    border-radius: 5px;
+    background-color: rgb(223, 223, 223);
+    padding: 0.2rem 0.5rem;
+    border: none;
+    width: 5rem;
+}
 
+.contact-btn:hover {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.contact-footer {
+    text-align: center;
 }
 
 @media (max-width: 1000px) {
@@ -89,6 +103,16 @@
         justify-content: space-between;
     }
 
+    .contact-footer {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.765);
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        color: rgb(223, 223, 223);
+        margin-top: 2rem;
+        border-radius: 20px;
+        padding: 1rem;
+    }
+
 }
 
 @media (max-width: 680px) {
@@ -98,7 +122,7 @@
     }
 
     .contact-container {
-        margin-top: 8rem;
+        margin-top: 10rem;
         margin-bottom: 1rem;
         margin-left: 0;
         margin-right: 0;
