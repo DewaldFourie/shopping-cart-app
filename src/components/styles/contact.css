@@ -3,7 +3,9 @@
     align-items: center;
     justify-content: center;
     height: 93.6vh;
-    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 50%, rgb(255, 255, 255) 100%);    
+    background-image: url('../../assets/contactBG.jpg');
+    background-size: cover;
+    background-position: top;
     width: 100%;
     max-width: 100%;
     
@@ -31,13 +33,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    outline: 1px solid;
     padding: 2rem;
-    border-radius: 25px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.765);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    color: rgb(223, 223, 223);
 }
 
 .contact-icon {
 
+}
+
+.contact-icon-image {
+    height: 3rem;
+    width: 3rem;
 }
 
 .contact-title {
@@ -46,6 +55,7 @@
 
 .contact-text-box {
     max-width: 12rem;
+    text-align: center;
 }
 
 .contact-btn-container {
