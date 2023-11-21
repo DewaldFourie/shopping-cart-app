@@ -47,7 +47,7 @@ function Navbar() {
         <nav className={`navbar ${isNavbarSticky ? 'sticky' : ''} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
             <div className="container">
                 <div className={`brand-name ${isNavbarSticky ? 'sticky' : ''}`}>
-                    <NavLink to="/home">Brand Name</NavLink>
+                    <NavLink to="/home">VirtueVogue</NavLink>
                 </div>
                 <div className={`nav-links ${isMobileMenuOpen ? 'mobile' : '' } ${isNavbarSticky ? 'sticky' : ''}`}>
                     <NavLink to="/home" exact activeClassName="active" onClick={toggleMobileMenu}>

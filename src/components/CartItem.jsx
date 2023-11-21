@@ -12,7 +12,7 @@ const CartItem = ({ item, addToCart, decrementItemInCart, deleteItemFromCart }) 
             <div className='item-details-container'>
                 <span className='item-name'>{item.title.slice(0, 20)}</span>
                 <div className='item-info'>
-                    <span>Size: </span>
+                    <span>Rating: </span>
                     <span>{item.rating.rate}</span>
                 </div>
             </div>

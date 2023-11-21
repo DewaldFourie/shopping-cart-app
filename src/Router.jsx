@@ -3,7 +3,7 @@ import ErrorPage from "./ErrorPage";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import Contact from "./components/Contact";
-import Base from "./base";
+import Base from "./Base";
 
 const Router = () => {
 

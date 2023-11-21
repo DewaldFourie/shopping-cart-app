@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     height: 93.6vh;
-    background-color: rgb(175, 140, 203);
+    background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(232, 232, 232) 50%, rgb(255, 255, 255) 100%);    
     width: 100%;
     max-width: 100%;
     

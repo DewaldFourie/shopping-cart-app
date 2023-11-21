@@ -20,7 +20,7 @@ const ShopItem = ({ item, addToCart }) => {
                     </div>
                 </div>
                 <div className='shop-item-price-container'>
-                    <h4 className='shop-item-price'>$ {item.price}</h4>
+                    <h4 className='shop-item-price'>$ {item.price.toFixed(2)}</h4>
                     <button className='add-to-cart-button' onClick={() => addToCart(item)}>Add to Cart</button>
                 </div>
             </div>

@@ -69,6 +69,18 @@
     height: 5rem;
 }
 
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93.6vh;
+    flex-direction: column;
+}
+
+.error-message {
+    color: red; /* Customize the color if needed */
+}
+
 
 
 
@@ -114,5 +126,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (min-height: 785px) {
+    .error-container {
+        height: 94.8vh;
     }
 }

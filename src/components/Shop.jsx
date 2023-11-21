@@ -56,8 +56,13 @@ const Shop = () => {
     }, []);
 
 
-    if (error) return <p>A network error was encountered</p>;
-
+    if (error) return (
+        <div className="error-container">
+            <p className="error-message">A network error was encountered</p>
+            <p className="error-message">Please try and refresh the page</p>
+            <p className="error-message">♻︎</p>
+        </div>
+    )
 
     return (
         <>

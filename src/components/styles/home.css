@@ -2,22 +2,99 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200vh;
-    background-color: rgb(140, 201, 203);
+    height: 250vh;
     width: 100%;
     max-width: 100%;
 }
 
 .banner-container {
-    height: 40%;
+    height: 35%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../assets/bannerImage1.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+}
+.banner-container-info {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    width: 100%;
+    margin-left: 20%;
 }
 
 .banner-container-text {
+    text-align: center;
+}
+
+.banner-container-btn {
+    width: 6rem;
+}
+
+.segment-1-container {
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url('../../assets/bannerImage3.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+}
+
+.segment-1-info {
+    margin-right: 20%;
+}
+
+.segment-1-text {
     width: 15rem;
     text-align: center;
+}
+
+.segment-2-container {
+    height: 15%;
+    background-image: url('../../assets/bannerImage5.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segment-3-container {
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../../assets/bannerImage6.jpg');
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+}
+
+.segment-3-info {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    gap: 2rem;
+}
+
+.info-element {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.info-element-icon {
+    height: 4rem;
+    width: 4rem;
 }
