@@ -31,7 +31,18 @@
 }
 
 .banner-container-btn {
-    width: 6rem;
+    width: 8rem;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 25px;
+    outline: 1px dashed;
+    margin: 4px;
+    border: none;
+}
+
+.banner-container-btn:hover {
+    cursor: pointer;
+    outline: 2px solid;
 }
 
 .segment-1-container {

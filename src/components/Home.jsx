@@ -31,7 +31,7 @@ const Home = () => {
                         Discover the latest trends in fashion, explore cutting-edge electronics, and adorn yourself with exquisite jewelry. 
                         Your journey to a more stylish and tech-savvy you begins here!
                         </p>
-                        <button className="banner-container-btn" onClick={handleShopNowClick}>Shop Now</button>
+                        <button className="banner-container-btn" onClick={handleShopNowClick}>Shop Now ➤</button>
                     </div>
                 </div>
                 <div className="segment-1-container">

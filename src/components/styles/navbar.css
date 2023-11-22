@@ -136,8 +136,15 @@
         top: 4.25rem;
         left: 0;
         right: 0;
-        background-color: #2b2b2bcb;
         text-align: center;
+        height: 5.5rem;
+        background-color: rgba(255, 255, 255, 0.365);
+        border-radius: 10px;
+        margin: 0.2rem;
+    }
+
+    .nav-links.sticky {
+        background-color: #28282B;
     }
 
     .nav-links a.active {
@@ -159,7 +166,7 @@
     
 
     .your-cart {
-        width: 6rem; 
+        width: 8rem; 
         text-align: right;
     }
 

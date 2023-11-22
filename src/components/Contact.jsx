@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // The contact page route
 
 import { useEffect } from "react";
