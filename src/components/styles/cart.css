@@ -1,16 +1,18 @@
 /* Cart.css */
 .cart {
     width: 0;
-    height: 80%;
+    height: 80vh;
     position: fixed;
+    z-index: 1;
     top: 11%;
     right: 1%;
-    background-color: #fff;
+    background-color: #28282B
+    ;
     overflow-x: hidden;
     transition: 0.5s;
     display: flex;
     border-radius: 25px;
-    color: black;
+    color: aliceblue;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 
@@ -20,7 +22,7 @@
 }
 
 hr {
-    color: black;
+    color: rgb(255, 255, 255);
     width: 100%;
 }
 
@@ -36,6 +38,14 @@ hr {
     align-items: center;
     justify-content: space-between;
     height: 5rem;
+    color: aliceblue;
+}
+
+.cart-header.right {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-cart-mobile {
@@ -45,10 +55,10 @@ hr {
 .cart-content {
     display: flex;
     flex-direction: column;
-    max-height: 80%;
-    min-height: 80%;
+    height: 75%;
     overflow-y: scroll;
     overflow-x: hidden;
+    color: aliceblue;
 }
 
 .cart-empty-container {
@@ -65,10 +75,11 @@ hr {
     justify-content: center;
     border-bottom: solid 1px grey;
     padding: 1rem;
+    color: aliceblue;
 }
 
 .closeCart-btn-container {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,15 +88,20 @@ hr {
 .closeCart-btn {
     background-color: transparent;
     border: none;
+    color: aliceblue;
 }
 
 .closeCart-btn:hover {
     cursor: pointer;
-    border-bottom: solid black 1px;
+    border-bottom: solid rgb(255, 255, 255) 1px;
 }
 
 .empty-cart-btn.invisible{
     display: none;
+}
+
+.empty-cart-btn {
+    color: aliceblue;
 }
 
 .empty-cart-btn:hover {
@@ -98,8 +114,9 @@ hr {
 
 .cart-right {
     width: 33%;
-    background-color: lightgrey;
+    background-color: whitesmoke;
     padding: 1.5rem;
+    color: black;
 }
 
 .total-items {
@@ -134,6 +151,11 @@ hr {
     justify-content: space-between;
 }
 
+.cart-total-amount {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .checkout-btn-container {
     display: flex;
     align-items: center;
@@ -141,18 +163,29 @@ hr {
     margin-top: 2rem;
 }
 
+.checkout-btn {
+    padding: 0.4rem;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+.checkout-btn:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+}
 
 /* Cart Item Styles*/
 
 .cart-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .cart-item-image {
     height: 4rem;
-    width: 6rem;
+    width: 5rem;
+    border-radius: 10px;
 }
 
 .item-details-container {
@@ -188,7 +221,7 @@ hr {
 .quantity-adjust-btn {
     background: transparent;
     border: none;
-    color: blue;
+    color: aliceblue;
     font-size: larger;
     padding: 0 5px;
 }
@@ -197,11 +230,18 @@ hr {
     cursor: pointer;
 }
 
+.cart-item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+}
+
 .item-remove-button {
     background: transparent;
     border: none;
     font-size: larger;
-    color: grey;
+    color: aliceblue;
     transition: transform 0.5s ease;
 }
 
@@ -221,7 +261,7 @@ hr {
     .cart {
         display: flex;
         flex-direction: column;
-        height: 80%;
+        height: 80vh;
         position: fixed;
         top: 11%;
         right: 1%;
@@ -239,7 +279,7 @@ hr {
 
     .cart-left {
         width: auto;
-        height: 60%;
+        min-height: fit-content;
     }
 
     .cart-right {
@@ -247,14 +287,13 @@ hr {
     }
 
     .cart-content {
-        height: 60%;
+        height: fit-content;
     }
 
     .closeCart-btn-container {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin-top: 20px;
     }
 
 
@@ -318,13 +357,33 @@ hr {
         flex-direction: column;
     }
 
-
     .number-of-items {
         display: none;
     }
 
     .close-cart-mobile {
         display: flex;
+        background-color: aliceblue;
+        border-radius: 5px;
+        border: none;
+        height: 1.2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-cart-mobile:hover {
+        cursor: pointer;
+    }
+
+    .cart-item-price {
+        text-align: center;
+    }
+
+    .cart-item-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
 

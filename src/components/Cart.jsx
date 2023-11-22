@@ -17,7 +17,7 @@ const Cart = ({ isOpen, closeCart }) => {
             <div className='cart-left'>
                 <div className='cart-header left'>
                     <h2>Shopping Cart</h2>
-                    <span className='number-of-items'>{getCartItemTotal()} Items</span>
+                    <span className='number-of-items'>{getCartItemTotal()} ITEMS</span>
                     <button className='close-cart-mobile' onClick={closeCart}>X</button>
                 </div>
                 <hr />
@@ -41,7 +41,7 @@ const Cart = ({ isOpen, closeCart }) => {
                     )}
                 </div>
                 <div className='closeCart-btn-container'>
-                    <button className='closeCart-btn' onClick={closeCart}>🔙 CLOSE CART</button>
+                    <button className='closeCart-btn' onClick={closeCart}>◀︎ CLOSE CART</button>
                     <button className={`closeCart-btn empty-cart-btn ${cartItems.length === 0 ? 'invisible' : 'visible'}`} onClick={clearCart}>EMPTY CART</button>
                 </div>
             </div>
@@ -69,10 +69,10 @@ const Cart = ({ isOpen, closeCart }) => {
                 <hr />
                 <div className='total-price-container'>
                     <h4>TOTAL PRICE:</h4>
-                    <h4>$ {getCartPriceTotal().toFixed(2)}</h4>
+                    <h4 className='cart-total-amount'>$ {getCartPriceTotal().toFixed(2)}</h4>
                 </div>
                 <div className='checkout-btn-container'>
-                    <button>CHECKOUT</button>
+                    <button className='checkout-btn'>✓ CHECKOUT</button>
                 </div>
             </div>
         </div>

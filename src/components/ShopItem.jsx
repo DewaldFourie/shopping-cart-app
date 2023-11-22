@@ -14,13 +14,12 @@ const ShopItem = ({ item, addToCart }) => {
                     <div className='shop-item-name-container'>
                         <h5 className='shop-item-name'>{item.title.slice(0, 40)}</h5>
                     </div>
-                    <div className='shop-item-info-container'>
-                        <span className='shop-item-info'>Rating: {item.rating.rate}</span>
-                        
-                    </div>
                 </div>
                 <div className='shop-item-price-container'>
+                    <span className='shop-item-info'>Rating: {item.rating.rate}</span>
                     <h4 className='shop-item-price'>$ {item.price.toFixed(2)}</h4>
+                </div>
+                <div className='shop-item-btn-container'>
                     <button className='add-to-cart-button' onClick={() => addToCart(item)}>Add to Cart</button>
                 </div>
             </div>

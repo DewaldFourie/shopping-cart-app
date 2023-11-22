@@ -15,6 +15,7 @@ function Navbar() {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isNavbarSticky, setIsNavbarSticky] = useState(false);
     const [isCartOpen, setCartOpen] = useState(false);
+    const [wiggle, setWiggle] = useState(false);
 
 
     // function to toggle the mobile burger menu @ certain media query
@@ -42,6 +43,16 @@ function Navbar() {
         };
     }, []);
 
+    // ada animation when cart total changes 
+    useEffect(() => {
+        // Add the 'wiggle' class for a short time when getCartItemTotal changes
+        setWiggle(true);
+        const timeout = setTimeout(() => {
+            setWiggle(false);
+        }, 500); 
+        return () => clearTimeout(timeout);
+    }, [getCartItemTotal]);
+
 
     return (
         <nav className={`navbar ${isNavbarSticky ? 'sticky' : ''} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
@@ -65,7 +76,7 @@ function Navbar() {
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-                <div className="your-cart">
+                <div className={`your-cart ${wiggle ? 'wiggle' : ''}`}>
                     <div><img className='cart-icon' src={isNavbarSticky ? cartIconWhite : cartIcon} alt="Cart"  onClick={toggleCart}/></div>
                     <div className='badge'>{getCartItemTotal()}</div>
                 </div>

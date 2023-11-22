@@ -2,6 +2,7 @@
 
 .navbar {
     position: fixed;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -16,9 +17,12 @@
 }
 
 .navbar.sticky {
-    background-color: rgb(0, 0, 0); 
+    background-color: #28282B
+    ; 
     position: fixed;
     color: white;
+    z-index: 2;
+
 }
 
 .container {
@@ -28,6 +32,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .brand-name {
@@ -74,6 +79,22 @@
 .your-cart a {
     font-size: 20px;
     text-decoration: none;
+}
+
+.wiggle {
+    animation: wiggleAnimation 0.5s;
+}
+
+@keyframes wiggleAnimation {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
 }
 
 .cart-icon {
@@ -126,11 +147,20 @@
     }
 
     .brand-name {
-        width: 4rem;
+        width: 8rem;
     }
 
+    .brand-name a{
+        max-width: 4rem;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+    
+
     .your-cart {
-        width: 4rem; 
+        width: 6rem; 
         text-align: right;
     }
 

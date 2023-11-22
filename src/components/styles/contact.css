@@ -29,13 +29,14 @@
 }
 
 .contact-section {
+    width: 12rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.765);
+    background-color: rgba(40, 40, 43, 0.915);
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     color: rgb(223, 223, 223);
 }
@@ -146,8 +147,9 @@
 
 }
 
-@media (min-height: 785px) {
+@media (min-height: 785px) and  (min-width: 500px) {
     .contact-content {
         height: 94.8vh;
     }
 }
+

@@ -10,16 +10,9 @@ const CartItem = ({ item, addToCart, decrementItemInCart, deleteItemFromCart }) 
                 <img className="cart-item-image" src={item.image} alt={item.image} />
             </div>
             <div className='item-details-container'>
-                <span className='item-name'>{item.title.slice(0, 20)}</span>
-                <div className='item-info'>
-                    <span>Rating: </span>
-                    <span>{item.rating.rate}</span>
-                </div>
+                <span className='cart-item-name'>{item.title.slice(0, 20)}</span>
             </div>
             <div className='item-quantity-container'>
-                {/* <div className='item-quantity-text'>
-                    <span>Qty:</span>
-                </div> */}
                 <div className='item-quantity-display'>
                     <button className='quantity-adjust-btn' onClick={() => decrementItemInCart(item)}>-</button>
                     <input
