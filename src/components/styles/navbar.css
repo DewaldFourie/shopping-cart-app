@@ -17,8 +17,7 @@
 }
 
 .navbar.sticky {
-    background-color: #28282B
-    ; 
+    background-color: #28282B; 
     position: fixed;
     color: white;
     z-index: 2;

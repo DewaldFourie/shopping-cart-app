@@ -1,13 +1,25 @@
 import PropTypes from 'prop-types';
 import './styles/shop.css';
+import { useState } from 'react';
 
 const ShopItem = ({ item, addToCart }) => {
+
+    const [showNotification, setShowNotification] = useState(false)
+
+
+    const handleAddToCart = () => {
+        addToCart(item)
+        setShowNotification(true)
+        setTimeout(() => {
+            setShowNotification(false)
+        }, 2000)
+    }
 
 
     return (
         <div className='shop-item-container'>
             <div className='shop-item-image-container'>
-                <img className='shop-item-image' src={item.image} alt="shop-item-image" />
+                <img className={`shop-item-image`} src={item.image} alt="shop-item-image" />
             </div>
             <div className='shop-item-details-container'>
                 <div className='shop-item-text-container'>
@@ -20,7 +32,8 @@ const ShopItem = ({ item, addToCart }) => {
                     <h4 className='shop-item-price'>$ {item.price.toFixed(2)}</h4>
                 </div>
                 <div className='shop-item-btn-container'>
-                    <button className='add-to-cart-button' onClick={() => addToCart(item)}>Add to Cart</button>
+                    <button className='add-to-cart-button' onClick={handleAddToCart}>Add to Cart</button>
+                    {showNotification && <div className='added-to-cart-notification'>✓ Added to Cart</div>}
                 </div>
             </div>
         </div>
@@ -41,3 +54,5 @@ ShopItem.propTypes = {
 
 
 export default ShopItem;
+
+
