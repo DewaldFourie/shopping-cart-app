@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'mainFont';
+    src: url('../../assets/marcelusFont.ttf');
+}
+
 .contact-content {
     display: flex;
     align-items: center;
@@ -8,7 +13,7 @@
     background-position: top;
     width: 100%;
     max-width: 100%;
-    
+    font-family: 'mainFont';
 }
 
 .contact-container {
@@ -29,7 +34,7 @@
 }
 
 .contact-section {
-    width: 12rem;
+    width: 14rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,7 +60,7 @@
 }
 
 .contact-text-box {
-    max-width: 12rem;
+    max-width: 14rem;
     text-align: center;
 }
 

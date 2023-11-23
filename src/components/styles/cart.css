@@ -1,4 +1,9 @@
 /* Cart.css */
+@font-face {
+    font-family: 'mainFont';
+    src: url('../../assets/marcelusFont.ttf');
+}
+
 .cart {
     width: 0;
     height: 80vh;
@@ -46,6 +51,7 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'mainFont';
 }
 
 .close-cart-mobile {
@@ -89,6 +95,7 @@ hr {
     background-color: transparent;
     border: none;
     color: aliceblue;
+    font-family: 'mainFont';
 }
 
 .closeCart-btn:hover {
@@ -167,6 +174,8 @@ hr {
     padding: 0.4rem;
     border-radius: 10px;
     background-color: transparent;
+    font-family: 'mainFont';
+    border: 1px solid;
 }
 
 .checkout-btn:hover {
@@ -352,7 +361,7 @@ hr {
 
     .cart-item {
         margin: 1rem;
-        gap: 2px;
+        gap: 8px;
         display: flex;
         flex-direction: column;
     }
@@ -377,6 +386,7 @@ hr {
 
     .cart-item-price {
         text-align: center;
+        font-size: 18px;
     }
 
     .cart-item-name {

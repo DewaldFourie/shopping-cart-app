@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import './styles/shop.css';
 import { useState } from 'react';
+import StarRating from './StarRating';
 
 const ShopItem = ({ item, addToCart }) => {
 
@@ -28,7 +29,7 @@ const ShopItem = ({ item, addToCart }) => {
                     </div>
                 </div>
                 <div className='shop-item-price-container'>
-                    <span className='shop-item-info'>Rating: {item.rating.rate}</span>
+                    <StarRating rating={item.rating.rate} totalStars={5} />
                     <h4 className='shop-item-price'>$ {item.price.toFixed(2)}</h4>
                 </div>
                 <div className='shop-item-btn-container'>

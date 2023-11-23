@@ -1,5 +1,10 @@
 /* Navbar.css */
 
+@font-face {
+    font-family: 'mainFont';
+    src: url('../../assets/marcelusFont.ttf');
+}
+
 .navbar {
     position: fixed;
     z-index: 2;
@@ -14,6 +19,7 @@
     align-items: center;
     padding: 10px 0;
     transition: all 0.3s ease;
+    font-family: 'mainFont';
 }
 
 .navbar.sticky {
