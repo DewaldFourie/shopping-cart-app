@@ -17,7 +17,8 @@ The app site features the fully functional front-end components
 
 ## Preview
 
-TBC
+<img width="1422" alt="shopping-app-ss" src="https://github.com/DewaldFourie/shopping-cart-app/assets/66355688/6daac02e-b3ce-4816-8e73-b2b31f6f9363">
+
 
 ## [DEMO](https://e-commerce-shop-mocha.vercel.app/)
 
