@@ -5,7 +5,10 @@ import Shop from "./components/Shop";
 import Contact from "./components/Contact";
 import Base from "./Base";
 
+
 const Router = () => {
+
+
 
     const router = createBrowserRouter([
         {
