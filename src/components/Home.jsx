@@ -37,7 +37,7 @@ const Home = () => {
                 <div className="segment-1-container">
                     <div className="segment-1-info">
                         <p className="segment-1-text">
-                        <b>VirtueVogue</b> brings you a curated collection of style and innovation. 
+                        <b className="brand-name-in-text">VirtueVogue</b> brings you a curated collection of style and innovation. 
                         Unleash your shopping desires and redefine your lifestyle with our diverse range of products. 
                         Elevate your wardrobe, amplify your gadgets, and adorn yourself with elegance. 
                         </p>
