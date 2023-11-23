@@ -53,6 +53,8 @@
     margin: 4px;
     border: none;
     font-family: 'mainFont';
+    font-weight: 900;
+    font-size: 15px;
 }
 
 .banner-container-btn:hover {

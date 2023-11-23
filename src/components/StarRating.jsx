@@ -24,3 +24,4 @@ StarRating.propTypes = {
 };
 
 export default StarRating;
+

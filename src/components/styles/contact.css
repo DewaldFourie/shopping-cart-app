@@ -46,17 +46,10 @@
     color: rgb(223, 223, 223);
 }
 
-.contact-icon {
-
-}
 
 .contact-icon-image {
     height: 3rem;
     width: 3rem;
-}
-
-.contact-title {
-
 }
 
 .contact-text-box {
@@ -64,9 +57,6 @@
     text-align: center;
 }
 
-.contact-btn-container {
-
-}
 
 .contact-btn {
     border-radius: 5px;
@@ -80,6 +70,7 @@
     background-color: white;
     cursor: pointer;
     transform: scale(1.2);
+    transition: transform 0.5s ease;
 }
 
 .contact-footer {
